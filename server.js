@@ -11,10 +11,15 @@ app.use(cookieParser())
 app.use(cors())
 app.use(fileUpload({
     useTempfiles: true
+
 }))
+
 // Routes
 
 app.use('/user', require('./routes/userRouter'))
+app.use('/api', require('./routes/categoryRouter'))
+app.use('/api', require('./routes/upload'))
+app.use('/api', require('./routes/productRouter'))
 
 //connect to mongodb
 
